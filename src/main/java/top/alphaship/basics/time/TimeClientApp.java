@@ -13,12 +13,6 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  */
 public class TimeClientApp {
 
-    private int port;
-
-    public TimeClientApp(int port) {
-        this.port = port;
-    }
-
     public void run() throws Exception {
         NioEventLoopGroup workerLoopGroup = new NioEventLoopGroup();
         try {
@@ -41,6 +35,6 @@ public class TimeClientApp {
     }
 
     public static void main(String[] args) throws Exception {
-        new TimeClientApp(8082).run();
+        new TimeClientApp().run();
     }
 }
